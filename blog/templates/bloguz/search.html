@@ -1,0 +1,80 @@
+{% extends "baseuz.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="/static/css/search.css">
+<link rel="stylesheet" href="{% static './css/usligi.css' %}">
+<title>Qidiruv</title>
+{% endblock %}
+{% block content %}
+<div class="container" style="padding-bottom: 40px;">
+        {% comment %} <h1 class="text-center">Qidiruv natijalari</h1> {% endcomment %}
+{% if query %}
+    <marquee behavior="scroll" direction="ri" scrollamount="10">
+        <h2 class="text-center1">«{{ query }}» ga ko'ra qidiruv natijalari</h2>
+    </marquee>
+    <h3 class="text-center2">Doktorlar</h3>
+
+    {% if results_doktor %}
+        <div class="nashi-vrachi-str-div-box-img" style="padding:10px 60px; margin: 0 auto; margin-top: 35px; justify-content: center;">
+            <div class="row nashi-vrachi-str-div-box-img_div" >
+                {% for doktor in results_doktor %}
+                    {% if doktor.group_lang == 'uz' %}
+                        <div class="doktori-div-box">
+                            <img src="{{ doktor.image.url }}" class="card-img-top" alt="{{ doktor.name }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ doktor.name }}</h5>
+                                <p class="card-text">{{ doktor.min_skill }}</p>
+                                <p class='card-text'>Price {{ doktor.price }}$</p>
+                                <a href="{% url 'doktor_detail' doktor.id %}" class="btn btn-primary">Batafsil</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <p class="text-center3">"{{ query }}" bo'yicha hech Doktor topilmadi.</p>
+    {% endif %}
+    <h3 class="text-center2">Xizmatlar</h3>
+
+    {% if results_xizmat %}
+            <div style="padding:0 120px; width: 100%; gap: 5px; display: flex;
+            justify-content: space-between; flex-wrap: wrap;">
+                {% for xizmat in results_xizmat %}
+                    {% if xizmat.group_lang ==  'ru' %}
+                        <div class="nashi_uslugi_ul_li_a" style="width: 48%; margin-top: 10px;">
+                            <div class="uzgarmas">
+                               <ul style=" display: flex; justify-content: space-between; margin: 10px 0;" class="ul_li_hover">
+                                <li class="li02" style="list-style: none; margin-left: 28px;">{{ xizmat.name }}</li>
+                                <li class="li02" style="list-style: none; margin-left: 28px;">Price {{ xizmat.price }}$</li>
+                               </ul>
+                                <a href="{% url 'xizmat_detail' xizmat.id %}" class="btn btn-primary" style="margin-right: 2px;">Batafsil</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+    {% else %}
+        <p class="text-center5">"{{ query }}" bo'yicha hech qanday xizmat topilmadi.</p>
+    {% endif %}
+{% else %}
+    <p class="text-center6">Qidiruv so'zini kiriting.</p>
+{% endif %}
+</div>
+
+<script>
+    var accordion_2 = document.getElementsByClassName("accordion_2");
+    var b;
+    for (b = 0; b < accordion_2.length; b++) {
+        accordion_2[b].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel_2 = this.nextElementSibling;
+            if (panel_2.style.maxHeight) {
+                panel_2.style.maxHeight = null;
+            } else {
+                panel_2.style.maxHeight = panel_2.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+{% endblock %}

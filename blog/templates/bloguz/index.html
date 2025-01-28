@@ -1,0 +1,468 @@
+{% extends "baseuz.html" %}
+{% load static %}
+{% block head %}
+<title>Bosh sahifa</title>
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+
+{% endblock %}
+
+
+{% block content %}
+    <!--! Header start -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-content-div">
+                    <img class="union-01" src="{% static "./img/Union-02.png" %}" alt="Union">
+                    <h1>Shaxsiy narkologiya klinikasi <span>Tverda</span></h1>
+                    <ul>
+                        <li><span>Anonimlik kafolati</span></li>
+                        <li><span>Statsionar va uyda</span></li>
+                        <li><span>Shifokor 40 daqiqa ichida yetib keladi</span></li>
+                        <li><span>Reabilitatsiya doimiy qaytishdan himoya qilish kafolati bilan</span></li>
+                    </ul>
+                    <button class="button-1" onclick="showHide('sub1')">Ariza qoldirish</button>
+                    <button class="button-2">Telegram ga yozish</button>
+                </div>
+                <div class="header-content-div">
+                    <img class="header-content-img-2" src="{% static "./img/Union-1.png" %}" alt="union-01">
+                    <img class="header-content-img doktor" src="{% static "/img/Doktor-1.png" %}" alt="doctor-image">
+                    <img class="header-content-img-1" src="{% static "/img/Uchburchak.png" %}" alt="doctor-image">
+                    <div class="togriburcgak"></div>
+                    <div class="tortburchak"></div>
+                </div>
+            </div>
+            <div class="nav-position-relative_abs" id="sub1">
+                <p>Mutahasisdan bepul konsultasiya olish</p>
+                <button style="margin-right: 20px;"><a href="#"><i class="fa-solid fa-phone"></i> Qo'ng'iroq qilish</a></button> <button><a href="#"><i class="fa-solid fa-paper-plane"></i> Telegram</a></button>
+            </div>
+        </div>
+    </header>
+    <!--! Header end -->
+    <!--! Main start  -->
+    <main>
+        <!--Todo Popularnost uslugi  -->
+        <section id="popularnost">
+            <div class="container">
+                <h2 class="popularnost-h2">Mashhur  <span><a href="{% url "xizmatlaruz" %}" style="text-decoration: underline;   color: #1B315F;">Xizmatlar</a></span></h2>
+                <div class="uslugi">
+                   <div class="uslugi-img">
+                    <img class="uslugi-union" src="{% static "./img/Union.png" %}" alt="union">
+                    <img class="uslugi-user" src="{% static "/img/Uslugi.jpg" %}" alt="doctor-image">
+                    <img class="uslugi-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                    <div class="togriburcgak"></div>
+                    <div class="tortburchak"></div>
+                   </div>
+                   <div class="uslugi-text">
+                    <div class="uslugi-text-div">
+                        <p class="p1"><img src="{% static "./img/Frame 40.png" %}" alt="Frame40">Tez yordam kerakmi</p>
+                        <div class="uslugi-text-div_div1">
+                            <div class="uslugi-text-div_div1_box">
+                                <p class="p2">Наркомания</p>
+                                <div class="usludi-text-div_div1_box">
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>UBOD</span> <div class="hr"></div> <p>ot 30 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Chiqib ketish belgilarini olib tashlash</span> <div class="hr"></div> <p>ot 6 500 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Dori-darmonlarni davolash</span> <p>ot 6 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Dori vositalarini detoksifikatsiya qilish</span><p>ot 6 000 $</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uslugi-text-div_div1_box">
+                                <p class="p2">Dori vositalarini detoksifikatsiya qilish</p>
+                                <div class="usludi-text-div_div1_box">
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>UBOD</span> <hr> <p>ot 30 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Chiqib ketish belgilarini olib tashlash</span> <hr> <p>ot 6 500 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Dori-darmonlarni davolash</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Dori vositalarini detoksifikatsiya qilish</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px;" class="uslugi-text-div">   <p class="p1"><img src="{% static "./img/Frame 41 (1).png" %}" alt="Frame4">Murakkab davolash kerak</p>
+                        <div class="uslugi-text-div_div1">
+                            <div class="uslugi-text-div_div1_box">
+                                <p class="p2">Наркомания</p>
+                                <div class="usludi-text-div_div1_box">
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>UBOD</span> <div class="hr"></div> <p>ot 30 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Chiqib ketish belgilarini olib tashlash</span> <div class="hr"></div> <p>ot 6 500 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Dori-darmonlarni davolash</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Dori vositalarini detoksifikatsiya qilish</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uslugi-text-div_div1_box">
+                                <p class="p2">Dori vositalarini detoksifikatsiya qilish</p>
+                                <div class="usludi-text-div_div1_box">
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>UBOD</span> <hr> <p>ot 30 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Chiqib ketish belgilarini olib tashlash</span> <hr> <p>ot 6 500 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Dori-darmonlarni davolash</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Dori vositalarini detoksifikatsiya qilish</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+
+                   </div>
+                </div>
+            </div>
+        </section>
+        <!--Todo Etape okazaniya pomoshi  -->
+        <section id="Etape">
+            <div class="container">
+                <div class="Etape-back">
+                    <h2><span>Yordam</span> bosqichlari</h2>
+                    <div class="Etape-text-div">
+                            <div class="Etape-text-div-text">
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">1</p>
+                                    <p class="Etape-text-div-text-box-p2">Arizangiz yoki qo'ng'irog'ingizning bizning kasalxonamizga kelib tushishi</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">2</p>
+                                    {% comment %} <p class="Etape-text-div-text-box-p2">Наш оператор соберет анамнез и назначит специалиста для выезда</p> {% endcomment %}
+                                    <p class="Etape-text-div-text-box-p2">Bizning operatorimiz ma'lumotlarni tahlil qiladi va yo'l mos mutahasisni tayinlaydi</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">3</p>
+                                    <p class="Etape-text-div-text-box-p2">Mutahasis 30 daqiqa ichida yetib boradi</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">4</p>
+                                    <p class="Etape-text-div-text-box-p2">Shifokorga to'lov protseduralar oldidan amalga oshiriladi (naqd pul, kartaga o'tkazish)</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">5</p>
+                                    <p class="Etape-text-div-text-box-p2">Bemorga tibbiy yordam ko'rsatish (tomchilash, in'ektsiya va boshqalar)</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">6</p>
+                                    <p class="Etape-text-div-text-box-p2">Taqdim etilayotgan xizmat sifatini tekshirish uchun sizga albatta qo'ng'iroq qilamiz.</p>
+                                </div>
+                            </div>
+                            <div class="Etape-text-div-img">
+                                <img src="{% static "./img/Frame-43.png" %}" alt="Frame43">
+                                <img class="uslugi-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                                <div class="togriburcgak"></div>
+                                <div class="tortburchak"></div>
+                            </div>
+                    </div>
+                    <img class="Union-3" src="{% static "./img/Union-3.png" %}" alt="Union-3">
+                    <img class="Union-4" src="{% static "./img/Union-4.png" %}" alt="Union-4">
+                </div>
+            </div>
+        </section>
+        <!--Todo Nashi sertifikate  -->
+        <section id="Sertifikat">
+            <div class="container">
+                <div class="Sertifikat">
+                    <h2 class="sertifikat-h2_1">Bizning litsenziyalarimiz  <span>va sertifikatlarimiz</span></h2>
+                <div id="wrapper">
+                    <div id="carousel">
+                        <div class="sertifikat-div" id="content">
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                    <h2 class="sertifikat-h2_2">Moskvadagi narkologiya klinikasi, <span> tajribali shifokorlar, yaxshi sharoitlar va anonimlik </span> kafolati</span></h2>
+                    <p class="sertifikat-p1">Spirtli ichimliklar va giyohvandlik barcha mamlakatlarda o'limning asosiy sabablaridan biridir. Muammodan xalos bo'lish uchun bemorga professional yordam kerak. Moskvadagi "No to Binges" dori-darmonlarni davolash klinikasi bemorlarning ahvolining og'irligidan qat'i nazar, ular bilan ishlaydi va giyohvandlik holatidan xalos bo'lish kafolatlangan individual samarali davolanishni ishlab chiqadi.</p>
+                    <h3 class="sertifikat-h3">Klinikani tanlash</h3>
+                    <p class="sertifikat-p1">Qaramlik - bu ruhiy kasallik bo'lib, unda odamda iroda buzilishi mavjud bo'lib, u etanolga bo'lgan majburiy ehtiros bilan kurashishni qiyinlashtiradi. Narkologga murojaat qilmasdan, faqat alkogolizmning birinchi bosqichida o'zingiz bilan kurashishingiz mumkin. Ammo abstinentlik rivojlanganda, psixologik istaklar jismoniy istaklar bilan murakkablashganda, giyohvandlik bo'yicha yordam markaziga murojaat qilishingiz kerak.  Malakali shifokorlar katta va kichik shaharlardagi bemorlarni davlat va pullik narkologiya klinikalarida ko'rishadi. Agar muassasa litsenziyaga ega bo'lsa, u davolash jarayonida Sog'liqni saqlash vazirligining samaradorligi va xavfsizligi isbotlangan barcha usullarning tavsifini o'z ichiga olgan klinik tavsiyalariga tayanishi shart.</p>
+                    <p class="sertifikat-p2">Ammo savdo markazlarida terapiya amalga oshiriladi:</p>
+                    <ul class="sertifikat-ul">
+                        <li><span>Maxfiylik</span></li>
+                        <li><span>Yuqori darajadagi qulaylikni ta'minlash</span></li>
+                        <li><span>Zamonaviy texnika va yaxshi dori vositalaridan foydalanish</span></li>
+                    </ul>
+                    <p class="sertifikat-p1">Shoshilinch tibbiy yordam bo‘limi va shifoxonadan tashqari xususiy narkologiya klinikalarida reabilitatsiya markazi va mutaxassislarning uyiga tashrif buyurish xizmati mavjud. Yordam kechayu kunduz taqdim etiladi va bemor davolanish haqida qo'shimcha ma'lumot olish uchun kunning istalgan vaqtida shifokor bilan bog'lanishi mumkin.</p>
+                </div>
+            </div>
+        </section>
+        <!--Todo Konsultasiya -->
+        <section id="Konsultasiya">
+          <div class="container">
+            <div class="konsultasiya-back_img">
+                <div class="konsultasiya-div">
+                    <h4>Bepul mutaxassis maslahatiga ega bo'ling</h4>
+                    <p class="konsultasiya-div-p">Turkum topmadingizmi yoki savollaringiz bormi? So'rov qoldiring va biz sizga yordam beramiz</p>
+                    <div class="konsultasiya-div-input_button">
+                        <div class="konsultasiya-div-input-i">
+                            <i class="fa-regular fa-user fa-flip-horizontal"></i>
+                            <input type="text" placeholder=" Ваше имя" >
+                        </div>
+                        <div class="konsultasiya-div-input-i">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <input type="text" placeholder="Телефон" >
+                        </div>
+                        <button onclick="showHide('sub1')">Ariza qoldirish</button>
+                    </div>
+                    <p class="konsultasiya-div-p1">“Arizani yuborish” tugmasini bosish orqali siz shaxsiy ma’lumotlarni qayta ishlashga rozilik bildirasiz</p>
+                </div>
+                <div class="nav-position-relative_abs" id="sub1">
+                    <p>Mutahasisdan bepul konsultasiya olish</p>
+                    <button style="margin-right: 20px;"><a href="#"><i class="fa-solid fa-phone"></i> Qo'ng'iroq qilish</a></button> <button><a href="#"><i class="fa-solid fa-paper-plane"></i> Telegram</a></button>
+                </div>
+                <img class="Union-5" src="{% static "./img/Union.png" %}" alt="Union-5">
+                <img class="Union-6" src="{% static "./img/Union.png" %}" alt="Union-6">
+            </div>
+          </div>
+        </section>
+        <!--Todo Foto Klinika -->
+        <section id="Foto-Klinika">
+            <div class="container">
+                <div class="foto-klinika">
+                    <h2>Klinika suratlari (faqat saralangan rasm qoyish kk)</h2>
+                    <div class="foto-klinika-div">
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                            </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+
+                    </div>
+                    <button><a style="color:white;" href="{% url "galereya" %}">Galereya</a><i class="fa-solid fa-rotate"></i></button>
+                </div>
+            </div>
+        </section>
+        <!--Todo Nashi garantiya -->
+        <section id="Nashi-garantiya">
+            <div class="container">
+                <div class="nashi-garantiya">
+                    <h2 class="sertifikat-h2_1">Bizning kafolatlarimiz</h2>
+                    <div class="nashi-garantiya_div_img">
+                        <div class="nashi-garantiya_box_img">
+                            <img src="{% static "./img/img-garantiya.png" %}" alt="garantiya">
+                            <img class="nashi-garantiya-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                            <div class="togriburcgak"></div>
+                            <div class="tortburchak"></div>
+                        </div>
+                        <div class="nashi-garantiya_box1_img1">
+                            <div class="garantiya-div_img_p">
+                                <div class="garantiya-box_img_p nomer-1">
+                                    <img src="{% static "./img/Frame 85.png" %}" alt="Frame-85">
+                                    <p>Davolanishdan keyin 100% natijani kafolatlaymiz</p>
+                                </div>
+                                <div class="garantiya-box_img_p nomer-2">
+                                     <img src="{% static "./img/Frame 86.png" %}" alt="Frame-86">
+                                     <p>Biz kimligimizni va nima uchun kelganimizni hech kim bilmaydi</p>
+                                </div>
+                                <div class="garantiya-box_img_p nomer-3">
+                                     <img src="{% static "./img/Frame 87.png" %}" alt="Frame-87">
+                                     <p>Biz istalmagan reaktsiyani istisno qilish uchun diagnostika o'tkazamiz</p>
+                                </div>
+                                <div class="garantiya-box_img_p nomer-4">
+                                     <img src="{% static "./img/Frame 88.png" %}" alt="Frame-88">
+                                     <p>Biz faqat yuqori sifatli va tasdiqlangan dori vositalaridan foydalanamiz</p>
+                                </div>
+                                <img class="nashi-garantiya-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                                <div class="togriburcgak"></div>
+                                <div class="tortburchak"></div>
+                            </div>
+                        </div>
+                        <img class="nashi-garantiya-past" src="{% static "./img/Union — 7png.png" %}" alt="union-7">
+
+                    </div>
+                    <div class="Nashi-garantiya_text">
+                        <h2 class="garantiya-h2_2">Davolash uchun ko'rsatmalar</h2>
+                        <p class="garantiya-p1">Har qanday giyohvandlik - bu bemorning psixikasida paradoksal o'zgarishlar yuzaga keladigan patologiya. U o'z fikrlarini doimiy ravishda giyohvandlik ob'ektiga qaytarishga majbur qiladigan yangi neyron aloqalarni rivojlantiradi. Ob'ekt turli xil narsalar bo'lishi mumkin: spirtli ichimliklar, giyohvand moddalar, tamaki. Shuningdek, giyohvandlikning substrat bo'lmagan turlari mavjud, masalan, shopaholizm, qimor o'yinlariga qaramlik, ishxo'rlik va boshqalar. Giyohvandlikning eng xavfli turlari kimyoviy moddalardir, chunki psixofaol moddalar nafaqat psixikaga ta'sir qiladi, balki insonning sog'lig'iga ham putur etkazadi, shuning uchun tashvish beruvchi alomatlar paydo bo'lsa, darhol giyohvand moddalarni davolash klinikasiga murojaat qilishingiz kerak.</p>
+                        <div class="garantiya_i_p">
+                            <i class="fa-solid fa-1"></i>
+                            <p> <span>Alkogolizm</span> - bu odam spirtli ichimliklarga bo'lgan ishtiyoqiga qarshi tura olmaydigan eng keng tarqalgan giyohvandlik. Giyohvandlik turli xil ijtimoiy mavqei, jinsi, daromad darajasi va xarakteridagi odamlarda rivojlanishi mumkin. Giyohvandlikning birinchi bosqichida etanol yoqimli his-tuyg'ularni keltirib chiqarishi, kuchlanishni engillashtirishi va kayfiyatni yaxshilashi mumkin. Ammo bir muncha vaqt o'tgach, alkogol o'zi ichishni to'xtata olmaydi, garchi mastlik endi zavq keltirmaydi. </p>
+                         </div>
+                        <p class="garantiya-p2">Xususiy narkologiya klinikasi alkogolga qaramlarga yordam beradi:</p>
+                        <ul class="garantiya-ul">
+                            <li><span>O'zingizni patologik istaklardan xalos qiling</span></li>
+                            <li><span>Narkomaniya rivojlanishining sabablarini tushuning</span></li>
+                            <li><span>Relapslarga qarshi turishni o'rganing</span></li>
+                        </ul>
+                        <p class="garantiya-p1">Buning uchun samarali protseduralar qo'llaniladi: kodlash, ichkilikbozlikdan voz kechish, reabilitatsiya. Dastur individual ravishda tuzilgan va butun terapiya davomida va hatto bo'shatilgandan keyin ham shifokorning ishtiroki va yordamini kafolatlaydi.</p>
+                     <div class="garantiya_i_p">
+                        <i class="fa-solid fa-2"></i><p> <span>Giyohvandlik </span>–  bu psixofaol moddalarga qaramlikning har qanday turini birlashtiradigan atama: sintetik, o'simlik, kombinatsiyalangan, farmatsevtik. Giyohvandlar alkogolizmga qaraganda tezroq rivojlanadigan sirt faol moddalarga bo'lgan ishtiyoqdan aziyat chekishadi. Shifolash uchun ular to'liq detoksifikatsiyadan o'tishlari kerak, bu nafaqat qondan, balki boshqa to'qimalardan ham toksinlarni olib tashlaydi, kodlash va psixoterapiya.</p>
+                     </div>
+                        <p class="garantiya-p2">В платных наркологических клиниках пациенты может лечиться в комфортабельном стационаре, где им предоставляют:</p>
+                        <ul class="garantiya-ul">
+                            <li><span>Narxlar ostida detoks o'tkazish imkoniyati</span></li>
+                            <li><span>To'liq anonimlik</span></li>
+                            <li><span>Qulaylik va zarur izolyatsiya</span></li>
+                        </ul>
+                        <p class="garantiya-p1">Pullik tibbiy markazlarda zamonaviy yondashuv qo'llaniladi, bunda asosiy rol dori-darmonlar bilan davolashdan ko'ra shaxsiyatni bosqichma-bosqich o'zgartirishga beriladi. Bir yil davomida reabilitatsiya markazida bo'lgan bemor zararli odatlardan butunlay voz kechish uchun kuchga ega bo'ladi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Todo Nashi doktora -->
+        <section id="Nashi-doktora">
+            <div class="container">
+              <div class="Nashi-doktora_content">
+                <div class="nashi-doktori">
+                    <h2 class="sertifikat-h2_1" style="color: #FFFFFF; ">Bizning shifokorlar</h2>
+                    <div id="wrapper1">
+                        <div id="carousel1">
+                            <div class="doktori-div" id="content1">
+                                {% for doktor in doktors %}
+
+                                    {% if doktor.group_lang == 'uz' and doktor.chiqish %}
+                                        <div class="doktori-div-box">
+                                            <img  src="{{doktor.image.url}}" alt="{{doktor.name}}">
+
+                                            <a href="{% url 'doktor_detailuz' doktor.id %}" style="text-decoration: none;" class="hovera"><h5>{{doktor.name}}</h5></a>
+                                            <p>{{doktor.min_skill}}</p>
+                                        </div>
+                                    {% endif %}
+
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{% url "doktorsuz" %}" class="hovera" style="text-decoration: none;"> <button >Barcha Doktorlar</button></a>
+                    <img class="nashi-doktori-union-8" src="{% static "./img/Union-8.png" %}" alt="union-9">
+                    <img class="nashi-doktori-union-9" src="{% static "./img/Union — 9png.png" %}" alt="union-8">
+                </div>
+                <div class="nashi-doktori_text">
+                    <h2 class="sertifikat-h2_2">Narkologiya klinikasi Moskvada: <span>tajribali shifokorlar, yaxshi sharoitlar va anonimlik kafolati</span></h2>
+                    <p class="sertifikat-p1">Alkogol va giyohvandlik qaramligi – bu barcha mamlakatlarda o'limning asosiy sabablaridan biridir. Muammodan xalos bo'lish uchun bemor professional yordam olishi kerak. "Zapoyam – net" narkologiya klinikasi Moskvada bemorlar bilan, ularning holatining og'irligidan qat'iy nazar, ishlaydi va individual samarali davolanishni ishlab chiqadi, bu esa giyohvandlik holatidan xalos bo'lishni kafolatlaydi.</p>
+                    <h3 class="sertifikat-h3">Klinikani tanlash</h3>
+                    <p class="sertifikat-p1">Qaramlik – bu ruhiy kasallik bo'lib, unda odamda iroda buzilishi mavjud, bu esa etanolga bo'lgan majburiy ehtiros bilan kurashishni qiyinlashtiradi. Buni faqat alkogolizmning birinchi bosqichida o'zingiz bilan kurashishingiz mumkin. Ammo abstinentlik rivojlanganda, psixologik istaklar jismoniy istaklar bilan murakkablashganda, giyohvandlik bo'yicha yordam markaziga murojaat qilishingiz kerak. <br> Malakali shifokorlar katta va kichik shaharlardagi bemorlarni davlat va pullik narkologiya klinikalarida ko'rishadi. Agar muassasa litsenziyaga ega bo'lsa, u davolash jarayonida Sog'liqni saqlash vazirligining samaradorligi va xavfsizligi isbotlangan barcha usullarning tavsifini o'z ichiga olgan klinik tavsiyalariga tayanishi shart.</p>
+                    <p class="sertifikat-p2">Ammo savdo markazlarida terapiya amalga oshiriladi:</p>
+                    <ul class="sertifikat-ul">
+                        <li><span>Maxfiylik</span></li>
+                        <li><span>Yuqori darajadagi qulaylikni ta'minlash</span></li>
+                        <li><span>Zamonaviy texnika va yaxshi dori vositalaridan foydalanish</span></li>
+                    </ul>
+                    <p class="sertifikat-p1">Shoshilinch tibbiy yordam bo‘limi va shifoxonadan tashqari xususiy narkologiya klinikalarida reabilitatsiya markazi va mutaxassislarning uyiga tashrif buyurish xizmati mavjud. Yordam kechayu kunduz taqdim etiladi va bemor davolanish haqida qo'shimcha ma'lumot olish uchun kunning istalgan vaqtida shifokor bilan bog'lanishi mumkin.</p>
+                </div>
+              </div>
+            </div>
+        </section>
+        <!-- Todo Kontact_mesto -->
+        <section id="Kontact">
+            <div class="container">
+                <div class="kontact_mesto" style="padding-top: 40px; padding-bottom: 120px;">
+                    <h2 class="Kontact-h2_2">Sizni kutamiz tibbiyot markazida <span>Demo logotipi</span></h2>
+                    <div class="kontact-mesto-div">
+                        <div class="kontact">
+                            <div class="kontact-position">
+                                <p>Bizga qanday borish mumkin?</p>
+                                <ul>
+                                    <li><i class="fa-solid fa-location-dot"></i> <a href="#">g. Boguchar, ul. Mjd Kiyev 17-km</a></li>
+                                    <li><i class="fa-solid fa-phone"></i> <a href="#">8 (800) 123-45-67</a></li>
+                                    <li><i class="fa-solid fa-phone"></i> <a href="#">8 (800) 123-45-67</a></li>
+                                </ul>
+                                <button onclick="showHide('sub8')">Ariza qoldirish</button>
+
+                                <img class="mesto-uchburchak" src="{% static '/img/Uchburchak.png' %}" alt="Uchburchak">
+                                <div class="togriburcgak"></div>
+                                <div class="tortburchak"></div>
+                            </div>
+                        </div>
+                        <div class="nav-position-relative_abs" id="sub8">
+                            <p>Mutahasisdan bepul konsultasiya olish</p>
+                            <button style="margin-right: 20px;"><a href="#"><i class="fa-solid fa-phone"></i> Qo'ng'iroq qilish</a></button> <button><a href="#"><i class="fa-solid fa-paper-plane"></i> Telegram</a></button>
+                        </div>
+                        <div class="mesto">
+                            <div class="kontact-mesto-div-karta">
+                                <iframe class="karta" src="https://maps.google.com/maps?q=buxara%20&amp;t=k&amp;z=19&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                        </div>
+                        <img class="kontact-mesto-union-10" src="{% static './img/Union — 10.png' %}" alt="union-10">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--! Main end  -->
+    <script src="{% static "js/main.js" %}"></script>
+<script>
+    Object.defineProperty(window, 'creators', {
+        get: function() {
+            console.log("Olimjonov Samandar, A'zamov Alisher");
+        }
+    });
+
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static "./css/stranisa-vrachi.css" %}">
+    <title>{{doktor.name}} sahifasi</title>
+{% endblock %}
+{% block content %}
+    <!-- main -->
+    <section id="Nashi-vrachi">
+        <div class="container">
+            <div style="padding-top: 40px; padding-bottom: 50px;">
+                <h2 style="color: #152F60;font-size: 40px;font-weight: bold;line-height: 40px;border-left: 4px solid #2770F1;padding-left: 15px;margin:20px 0 20px 30px;">{{doktor.name}}</h2>
+                <div class="nashi-vrachi-str-div" style="padding: 10px 35px; display: flex; justify-content: space-between;">
+                    <div class="nashi-vrachi-str-div-box">
+                        <div class="mesto">
+                            <div class="kontact-mesto-div-karta">
+                                <img style="width: 100%;" src="{{doktor.image.url}}" alt="vrach-img">
+                            </div>
+                            <img class="mesto-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                            <div class="togriburcgak"></div>
+                            <div class="tortburchak"></div>
+                            <img class="union-12" src="{% static "./img/Union — 12копия.png" %}" alt="union-12">
+                        </div>
+                    </div>
+                    <div class="nashi-vrachi-str-div-box-img" style="padding: 0 0 0 40px;">
+                        <div class="uslugi-text">
+                            <div class="uslugi-text-div">
+                                <p class="p1"><img src="{% static "./img/Frame 44 (1).png" %}" alt="Frame40">О враче</p>
+                                <div class="uslugi-text-div_div1">
+                                    <div class="uslugi-text-div_div1_box">
+                                        <p class="p2">Специализация</p>
+                                        <p class="p3">{{doktor.min_skill}}</p>
+                                    </div>
+                                    <div class="uslugi-text-div_div1_box">
+                                        <p class="p2">Категория</p>
+                                        <p class="p3">{{doktor.group}}</p>
+                                    </div>
+                                    <div class="uslugi-text-div_div1_box">
+                                        <p class="p2">Стаж</p>
+                                        <p class="p3">{{doktor.min_skill}}</p>
+                                    </div>
+                                    <div class="uslugi-text-div_div1_box">
+                                        <p class="p2">Стоимость приема</p>
+                                        <p class="p3">{{doktor.price}}$</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nashi_vrachi-div-text">
+                                <h4>{{doktor.name}}</h4>
+                                <p>{{doktor.max_skill}}</p>
+                            </div>
+                        </div>
+                        <div class="nav-position-relative_abs" id="sub4">
+                            <p>Shifokor ko'rigiga yozilish uchun bizga qo'ng'iroq qiling yoki telegram orqali bog'laning</p>
+                            <button style="margin-right: 20px;"><a href="#"><i class="fa-solid fa-phone"></i> Qo'ng'iroq qilish</a></button> <button><a href="#"><i class="fa-solid fa-paper-plane"></i> Telegram</a></button>
+                        </div>
+                        <div id="wrapper">
+                            <div id="carousel">
+                                <div class="sertifikat-div" id="content">
+                                    {% if doktor.sertificat1 != null %}
+                                        <div class="boxx1"><img src="{{doktor.sertificat1.url}}" alt="sertifikat"> <div class="sertifikat-color"></div></div>
+                                    {% endif %}
+                                    {% if doktor.sertificat2 != null %}
+                                        <div class="boxx1"><img src="{{doktor.sertificat2.url}}" alt="sertifikat"> <div class="sertifikat-color"></div></div>
+                                    {% endif %}
+                                    {% if doktor.sertificat3 != null %}
+                                        <div class="boxx1"><img src="{{doktor.sertificat3.url}}" alt="sertifikat"> <div class="sertifikat-color"></div></div>
+                                    {% endif %}
+                                    {% if doktor.sertificat4 != null %}
+                                        <div class="boxx1"><img src="{{doktor.sertificat4.url}}" alt="sertifikat"> <div class="sertifikat-color"></div></div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- main -->
+
+    <script src="{% static "./js/main.js" %}"></script>
+
+{% endblock %}

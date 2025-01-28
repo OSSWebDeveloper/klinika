@@ -1,0 +1,452 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<title>главная страница</title>
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+
+{% endblock %}
+
+
+{% block content %}
+    <!--! Header start -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-content-div">
+                    <img class="union-01" src="{% static "./img/Union-02.png" %}" alt="Union">
+                    <h1>Частная наркологическая клиника <span>в Твери</span></h1>
+                    <ul>
+                        <li><span>Гарантия анонимности</span></li>
+                        <li><span>В стационаре и на дому</span></li>
+                        <li><span>Приезд врача в течении 40 минут</span></li>
+                        <li><span>Реабилитация с пожизненной гарантией от срыва</span></li>
+                    </ul>
+                    <button class="button-1" onclick="showHide('sub1')">Оставить заявку</button>
+                    <button class="button-2">Написать на WhatsApp</button>
+                </div>
+                <div class="header-content-div">
+                    <img class="header-content-img-2" src="{% static "./img/Union-1.png" %}" alt="union-01">
+                    <img class="header-content-img doktor" src="{% static "/img/Doktor-1.png" %}" alt="doctor-image">
+                    <img class="header-content-img-1" src="{% static "/img/Uchburchak.png" %}" alt="doctor-image">
+                    <div class="togriburcgak"></div>
+                    <div class="tortburchak"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--! Header end -->
+    <!--! Main start  -->
+    <main>
+        <!--Todo Popularnost uslugi  -->
+        <section id="popularnost">
+            <div class="container">
+                <h2 class="popularnost-h2">Популярные <span><a href="{% url "xizmatlar" %}" style="text-decoration: underline;   color: #1B315F;">услуги</a></span></h2>
+                <div class="uslugi">
+                   <div class="uslugi-img">
+                    <img class="uslugi-union" src="{% static "./img/Union.png" %}" alt="union">
+                    <img class="uslugi-user" src="{% static "/img/Uslugi.jpg" %}" alt="doctor-image">
+                    <img class="uslugi-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                    <div class="togriburcgak"></div>
+                    <div class="tortburchak"></div>
+                   </div>
+                   <div class="uslugi-text">
+                    <div class="uslugi-text-div">
+                        <p class="p1"><img src="{% static "./img/Frame 40.png" %}" alt="Frame40">Нужна быстрая помощь</p>
+                        <div class="uslugi-text-div_div1">
+                            <div class="uslugi-text-div_div1_box">
+                                <p class="p2">Наркомания</p>
+                                <div class="usludi-text-div_div1_box">
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>УБОД</span> <div class="hr"></div> <p>ot 30 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Снятие ломки</span> <div class="hr"></div> <p>ot 6 500 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Наркологическая помощь</span> <p>ot 6 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Детоксикация от наркотиков</span><p>ot 6 000 $</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uslugi-text-div_div1_box">
+                                <p class="p2">Детоксикация от наркотиков</p>
+                                <div class="usludi-text-div_div1_box">
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>УБОД</span> <hr> <p>ot 30 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Снятие ломки</span> <hr> <p>ot 6 500 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Наркологическая помощь</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Детоксикация от наркотиков</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px;" class="uslugi-text-div">   <p class="p1"><img src="{% static "./img/Frame 41 (1).png" %}" alt="Frame4">Нужно комплексное лечение</p>
+                        <div class="uslugi-text-div_div1">
+                            <div class="uslugi-text-div_div1_box">
+                                <p class="p2">Наркомания</p>
+                                <div class="usludi-text-div_div1_box">
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>УБОД</span> <div class="hr"></div> <p>ot 30 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Снятие ломки</span> <div class="hr"></div> <p>ot 6 500 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Наркологическая помощь</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Детоксикация от наркотиков</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uslugi-text-div_div1_box">
+                                <p class="p2">Детоксикация от наркотиков</p>
+                                <div class="usludi-text-div_div1_box">
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>УБОД</span> <hr> <p>ot 30 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Снятие ломки</span> <hr> <p>ot 6 500 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Наркологическая помощь</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                    <div class="usludi-text-div_div1_box1">
+                                        <span>Детоксикация от наркотиков</span> <hr> <p>ot 6 000 $</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+
+                   </div>
+                </div>
+            </div>
+        </section>
+        <!--Todo Etape okazaniya pomoshi  -->
+        <section id="Etape">
+            <div class="container">
+                <div class="Etape-back">
+                    <h2>Этапы оказания <span>помощи</span></h2>
+                    <div class="Etape-text-div">
+                            <div class="Etape-text-div-text">
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">1</p>
+                                    <p class="Etape-text-div-text-box-p2">Поступление в клинику вашей заявки или звонка</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">2</p>
+                                    <p class="Etape-text-div-text-box-p2">Наш оператор соберет анамнез и назначит специалиста для выезда</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">3</p>
+                                    <p class="Etape-text-div-text-box-p2">Врач приезжает за 30 минут</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">4</p>
+                                    <p class="Etape-text-div-text-box-p2">Оплата врачу производится перед процедурами (наличные, переводом на карту)</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">5</p>
+                                    <p class="Etape-text-div-text-box-p2">Оказание пациенту медицинской помощи (капельницы, уколы и др.)</p>
+                                </div>
+                                <div class="Etape-text-div-text-box">
+                                    <p class="Etape-text-div-text-box-p">6</p>
+                                    <p class="Etape-text-div-text-box-p2">Мы обязательно перезвоним Вам, чтобы проконтролировать качество оказанной услуги</p>
+                                </div>
+                            </div>
+                            <div class="Etape-text-div-img">
+                                <img src="{% static "./img/Frame-43.png" %}" alt="Frame43">
+                                <img class="uslugi-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                                <div class="togriburcgak"></div>
+                                <div class="tortburchak"></div>
+                            </div>
+                    </div>
+                    <img class="Union-3" src="{% static './img/Union-3.png' %}" alt="Union-3">
+                    <img class="Union-4" src="{% static './img/Union-4.png' %}" alt="Union-4">
+                </div>
+            </div>
+        </section>
+        <!--Todo Nashi sertifikate  -->
+        <section id="Sertifikat">
+            <div class="container">
+                <div class="Sertifikat">
+                    <h2 class="sertifikat-h2_1">Наши лицензии <span>и сертификаты</span></h2>
+                <div id="wrapper">
+                    <div id="carousel">
+                        <div class="sertifikat-div" id="content">
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                            <div class="sertifikat-div-box">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                    <h2 class="sertifikat-h2_2">Наркологическая клиника в Москве: <span>опытные врачи, хорошие условия и гарантия анонимности</span></h2>
+                    <p class="sertifikat-p1">Алкогольная и наркотическая зависимость – одна из основных возможных причин смерти во всех странах. Чтобы освободиться от проблемы, больной должен получить профессиональную помощь. Наркологическая клиника «Запоям – нет» в Москве работает с пациентами, независимо от степени тяжести их состояния, и разрабатывает индивидуальное эффективное лечение, которое гарантированно избавит от аддиктивного состояния.</p>
+                    <h3 class="sertifikat-h3">Выбор клиники</h3>
+                    <p class="sertifikat-p1">Зависимость – это психическое заболевание, при котором у человека происходит расстройство воли, мешающее справиться с компульсивной тягой к этанолу. Справиться с ним самостоятельно, не обращаясь к наркологу, можно только на первой стадии алкоголизма. Но при развитии абстиненции, когда психологическая тяга осложняется физической, требуется обратиться в центр помощи зависимым. <br> Квалифицированные врачи принимают пациентов в крупных и маленьких городах в государственных и платных наркологических клиниках. Если учреждение имеет лицензию, оно обязано опираться при лечебном процессе на клинические рекомендации Минздрава, в которые входит описание всех доказавших действенность и безопасность методов.</p>
+                    <p class="sertifikat-p2">Но в коммерческих центрах терапия проходит:</p>
+                    <ul class="sertifikat-ul">
+                        <li><span>Анонимно</span></li>
+                        <li><span>C обеспечением высокого уровня комфорта</span></li>
+                        <li><span>C применением современных методик и хороших препаратов</span></li>
+                    </ul>
+                    <p class="sertifikat-p1">Кроме приемного отделения и стационара, в частных наркологических клиниках есть реабилитационный центр и служба выезда специалистов на дом. Помощь оказывается круглосуточно, при этом пациент может связаться с медиком в любое время суток для получения дополнительной информации о лечении.</p>
+                </div>
+            </div>
+        </section>
+        <!--Todo Konsultasiya -->
+        <section id="Konsultasiya">
+          <div class="container">
+            <div class="konsultasiya-back_img">
+                <div class="konsultasiya-div">
+                    <h4>Получите консультацию специалиста бесплатно</h4>
+                    <p class="konsultasiya-div-p">Не нашли категорию или остались вопросы? Оставьте заявку и мы поможем вам</p>
+                    <div class="konsultasiya-div-input_button">
+                        <div class="konsultasiya-div-input-i">
+                            <i class="fa-regular fa-user fa-flip-horizontal"></i>
+                            <input type="text" placeholder=" Ваше имя" >
+                        </div>
+                        <div class="konsultasiya-div-input-i">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <input type="text" placeholder="Телефон" >
+                        </div>
+                        <button onclick="showHide('sub1')">Оставить заявку</button>
+                    </div>
+                    <p class="konsultasiya-div-p1">Нажимая кнопку “Отправить заявку”, вы даете согласие на обработку
+                    <a href="#">персональных данных</a></p>
+                </div>
+                <img class="Union-5" src="{% static './img/Union.png' %}" alt="Union-5">
+                <img class="Union-6" src="{% static './img/Union.png' %}" alt="Union-6">
+            </div>
+          </div>
+        </section>
+        <!--Todo Foto Klinika -->
+        <section id="Foto-Klinika">
+            <div class="container">
+                <div class="foto-klinika">
+                    <h2>Фото клиники</h2>
+                    <div class="foto-klinika-div">
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                            </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+                        <div class="foto-klinika-div-img">
+                            <img src="{% static "./img/foto-klinika.png" %}" alt="foto-klinika">
+
+                        </div>
+
+                    </div>
+                    <button><a style='color:white;' href="{% url "galereyaru" %}">Загрузить еще<i class="fa-solid fa-rotate"></i></a></button>
+                </div>
+            </div>
+        </section>
+        <!--Todo Nashi garantiya -->
+        <section id="Nashi-garantiya">
+            <div class="container">
+                <div class="nashi-garantiya">
+                    <h2 class="sertifikat-h2_1">Наши гарантии</h2>
+                    <div class="nashi-garantiya_div_img">
+                        <div class="nashi-garantiya_box_img">
+                            <img src="{% static "./img/img-garantiya.png" %}" alt="garantiya">
+                            <img class="nashi-garantiya-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                            <div class="togriburcgak"></div>
+                            <div class="tortburchak"></div>
+                        </div>
+                        <div class="nashi-garantiya_box1_img1">
+                            <div class="garantiya-div_img_p">
+                                <div class="garantiya-box_img_p nomer-1">
+                                    <img src="{% static "./img/Frame 85.png" %}" alt="Frame-85">
+                                    <p>Гарантируем на 100% результат после лечения</p>
+                                </div>
+                                <div class="garantiya-box_img_p nomer-2">
+                                     <img src="{% static "./img/Frame 86.png" %}" alt="Frame-86">
+                                     <p>Никто не узнает, кто мы и зачем приходили</p>
+                                </div>
+                                <div class="garantiya-box_img_p nomer-3">
+                                     <img src="{% static "./img/Frame 87.png" %}" alt="Frame-87">
+                                     <p>Проведем диагностику для исключения нежелательной реакции</p>
+                                </div>
+                                <div class="garantiya-box_img_p nomer-4">
+                                     <img src="{% static "./img/Frame 88.png" %}" alt="Frame-88">
+                                     <p>Используем только качественные и проверенные препараты</p>
+                                </div>
+                                <img class="nashi-garantiya-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                                <div class="togriburcgak"></div>
+                                <div class="tortburchak"></div>
+                            </div>
+                        </div>
+                        <img class="nashi-garantiya-past" src="{% static "./img/Union — 7png.png" %}" alt="union-7">
+
+                    </div>
+                    <div class="Nashi-garantiya_text">
+                        <h2 class="garantiya-h2_2">Показания для обращения</h2>
+                        <p class="garantiya-p1">Любые зависимости – патологии, при которых в психике больного происходят парадоксальные изменения. У него возникают новые нейронные связи, которые заставляют постоянно возвращаться мыслями к объекту аддикции. Объектом могут быть разные вещи: алкоголь, наркотики, табак. Встречаются и бессубстратные виды зависимости, например, шопоголизм, игромания, трудоголизм и т.д. Наиболее опасными являются химические типы зависимости, так как психоактивные вещества не только влияют на психику, но и разрушают его здоровье, поэтому при появлении тревожных симптомов нужно немедленно обратиться в наркологическую клинику.</p>
+                        <div class="garantiya_i_p">
+                            <i class="fa-solid fa-1"></i>
+                            <p> <span>Алкоголизм </span> – самая распространенная аддикция, при которой человек не может сопротивляться тяге к спиртным напиткам. Зависимость может развиться у людей разного социального статуса, пола, уровня дохода, характера. На первом этапе аддикции этанол может вызывать приятные ощущения, снимая напряжение и улучшая настроение. Но спустя некоторое время алкоголик не может прекратить пить сам, несмотря на то, что опьянение уже не приносит удовольствия.</p>
+                         </div>
+                        <p class="garantiya-p2">Частная наркологическая клиника помогает алкозависимым:</p>
+                        <ul class="garantiya-ul">
+                            <li><span>Освободиться от патологической тяги</span></li>
+                            <li><span>Осознать причины развития аддикции</span></li>
+                            <li><span>Научиться сопротивляться срывам</span></li>
+                        </ul>
+                        <p class="garantiya-p1">Для этого используются действенные процедуры: кодирование, вывод из запоя, реабилитация. Программа составляется индивидуально и гарантирует участие и поддержку врача в течение всей терапии и даже после выписки.</p>
+                     <div class="garantiya_i_p">
+                        <i class="fa-solid fa-2"></i><p> <span>Наркомания </span>– термин, объединяющий любые виды зависимости от психоактивных веществ: синтетических, растительных, комбинированных, аптечных <br> Наркозависимые страдают от выраженной тяги к ПАВ, которая прогрессирует быстрее, чем при алкоголизме. Для излечения им нужно пройти через тщательную детоксикацию, которая выведет токсины не только из крови, но и из других тканей, кодировку и психотерапию.</p>
+                     </div>
+                        <p class="garantiya-p2">В платных наркологических клиниках пациенты может лечиться в комфортабельном стационаре, где им предоставляют:</p>
+                        <ul class="garantiya-ul">
+                            <li><span>Возможность пройти через детокс под наркозом</span></li>
+                            <li><span>Полную анонимность</span></li>
+                            <li><span>Комфорт и необходимую изоляцию от провоцирующих факторов</span></li>
+                        </ul>
+                        <p class="garantiya-p1">В платных медицинских центрах используется современный подход, при котором ведущая роль отдается не медикаментозному лечению, а постепенному изменению личности. Проведя год в восстановительном центре, пациент обретает силы для полного отказа от вредных привычек.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Todo Nashi doktora -->
+        <section id="Nashi-doktora">
+            <div class="container">
+              <div class="Nashi-doktora_content">
+                <div class="nashi-doktori">
+                    <h2 class="sertifikat-h2_1" style="color: #FFFFFF; ">Наши доктора</h2>
+                    <div id="wrapper1">
+                        <div id="carousel1">
+                            <div class="doktori-div" id="content1">
+                                {% for doktor in doktors %}
+
+                                    {% if doktor.group_lang == 'ru' and doktor.chiqish %}
+                                        <div class="doktori-div-box">
+                                            <img src="{{doktor.image.url}}" alt="{{doktor.name}}">
+                                            <h5><a style="text-decoration:none" href="{% url 'doktor_detail' doktor.id %}">{{doktor.name}}</a></h5>
+                                            <p>{{doktor.min_skill}}</p>
+                                        </div>
+                                    {% endif %}
+
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{% url "doktors" %}" style="text-decoration: none;" > <button class="hh">Все врачи</button></a>
+                    <img class="nashi-doktori-union-8" src="{% static './img/Union-8.png' %}" alt="union-9">
+                    <img class="nashi-doktori-union-9" src="{% static './img/Union — 9png.png' %}" alt="union-8">
+                </div>
+                <div class="nashi-doktori_text">
+                    <h2 class="sertifikat-h2_2">Наркологическая клиника в Москве: <span>опытные врачи, хорошие условия и гарантия анонимности</span></h2>
+                    <p class="sertifikat-p1">Алкогольная и наркотическая зависимость – одна из основных возможных причин смерти во всех странах. Чтобы освободиться от проблемы, больной должен получить профессиональную помощь. Наркологическая клиника «Запоям – нет» в Москве работает с пациентами, независимо от степени тяжести их состояния, и разрабатывает индивидуальное эффективное лечение, которое гарантированно избавит от аддиктивного состояния.</p>
+                    <h3 class="sertifikat-h3">Выбор клиники</h3>
+                    <p class="sertifikat-p1">Зависимость – это психическое заболевание, при котором у человека происходит расстройство воли, мешающее справиться с компульсивной тягой к этанолу. Справиться с ним самостоятельно, не обращаясь к наркологу, можно только на первой стадии алкоголизма. Но при развитии абстиненции, когда психологическая тяга осложняется физической, требуется обратиться в центр помощи зависимым. <br> Квалифицированные врачи принимают пациентов в крупных и маленьких городах в государственных и платных наркологических клиниках. Если учреждение имеет лицензию, оно обязано опираться при лечебном процессе на клинические рекомендации Минздрава, в которые входит описание всех доказавших действенность и безопасность методов.</p>
+                    <p class="sertifikat-p2">Но в коммерческих центрах терапия проходит:</p>
+                    <ul class="sertifikat-ul">
+                        <li><span>Анонимно</span></li>
+                        <li><span>C обеспечением высокого уровня комфорта</span></li>
+                        <li><span>C применением современных методик и хороших препаратов</span></li>
+                    </ul>
+                    <p class="sertifikat-p1">Кроме приемного отделения и стационара, в частных наркологических клиниках есть реабилитационный центр и служба выезда специалистов на дом. Помощь оказывается круглосуточно, при этом пациент может связаться с медиком в любое время суток для получения дополнительной информации о лечении.</p>
+                </div>
+              </div>
+            </div>
+        </section>
+        <!-- Todo Kontact_mesto -->
+        <section id="Kontact">
+            <div class="container">
+                <div class="kontact_mesto" style="padding-top: 40px; padding-bottom: 120px;">
+                    <h2 class="Kontact-h2_2">Ждем вас в медицинском центре <span>Демо лого</span></h2>
+                    <div class="kontact-mesto-div">
+                        <div class="kontact">
+                            <div class="kontact-position">
+                                <p>Как к нам добраться?</p>
+                                <ul>
+                                    <li><i class="fa-solid fa-location-dot"></i> <a href="#">г. Богучар, ул. Мжд Киевское 17-й км</a></li>
+                                    <li><i class="fa-solid fa-phone"></i> <a href="#">8 (800) 123-45-67</a></li>
+                                    <li><i class="fa-solid fa-phone"></i> <a href="#">8 (800) 123-45-67</a></li>
+                                </ul>
+                                <button class="hh" onclick="showHide('sub1')">Оставить заявку</button>
+                                <img class="mesto-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                                <div class="togriburcgak"></div>
+                                <div class="tortburchak"></div>
+                            </div>
+                        </div>
+                        <div class="mesto">
+                            <div class="kontact-mesto-div-karta">
+                            <iframe class="karta" src="https://maps.google.com/maps?q=buxara%20&amp;t=k&amp;z=19&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                        </div>
+                        <img class="kontact-mesto-union-10" src="{% static "./img/Union — 10.png" %}" alt="union-10">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--! Main end  -->
+
+<script>
+    Object.defineProperty(window, 'creators', {
+        get: function() {
+            console.log("Olimjonov Samandar, A'zamov Alisher");
+        }
+    });
+</script>
+
+{% endblock %}

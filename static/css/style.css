@@ -1,0 +1,1428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+body{
+    background: #2b2e3428;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    background: #F1F5FF;
+}
+/* Navbar start */
+.nav{
+    padding: 10px 25px;
+}
+.nav-position-relative_abs{
+    position: absolute;
+    width: 650px;
+    height: 220px;
+    background-color: #162D5F   ;
+    opacity: 0.8;
+    z-index: 1;
+    display: block;
+    padding: 30px 50px;
+    top:   10px;
+    text-align: center;
+    position: fixed;
+    left: 27%;
+    display: none;
+}
+.nav-position-relative_abs p{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.nav-position-relative_abs button{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border: 0;
+    background-color: rgba(0, 0, 255, 0.879);
+    border-radius: 4px;
+}
+.nav-position-relative_abs button a{
+   color: white;
+   text-decoration: none;
+
+}
+.nav-div1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-div1-box{
+    display: flex;
+    align-items: center;
+}
+.nav-div1-box img{
+    width: 190px;
+}
+.nav-div1-box ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 20px;
+}
+.nav-div1-box ul li{
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    background: rgba(183, 182, 182, 0.403);
+    color:#2770F1 ;
+}
+.nav-div1-box ul li:hover{
+    background-color: #2770F1;
+    transition: 0.75s;
+}
+.nav-div1-box ul li a{
+    text-decoration: none;
+    color: #2770F1;
+    font-size: 16px;
+    align-items: center ;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.nav-div1-box ul li a:hover{
+    color: white;
+    transition: 0.75s;
+}
+.nav-div1-box button{
+    background: #2770F1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.nav-div1-box button:hover{
+    background: #2b2e34;
+    transition: 0.75s;
+}
+.nav-div1-box1 a i{
+    font-size: 20px;
+    background: rgba(183, 182, 182, 0.403);
+    color: #2770F1;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 4px;
+}
+.nav-div1-box1 p{
+    text-align: right   ;
+    margin-left: 20px;
+    color:  #1B315F;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.nav-div1-box1 p a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 900;
+}
+.Input-display_none{
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-left: 5px;
+    display: none;
+}
+.a_langUZB_RU{
+    color: white;
+    text-decoration: none;
+    background: rgba(183, 182, 182, 0.403);
+    height: 35px;
+    align-items: center;
+    display: inline;
+    border-radius: 4px;
+    margin-left: 5px;
+    padding: 8px 5px 5px 5px;
+}
+.bar{
+    padding: 10px 45px;
+}
+.bar .bar-ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.bar .bar-ul .active{
+    font-size: 16px;
+
+}
+.bar .bar-ul li a{
+    text-decoration: none;
+    color: #1B315F;
+}
+/* Accordion Navbar */
+.panel{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-out;
+    position: absolute;
+    background: #F1F5FF;
+    width: 120px;
+    padding: 5px 10px ;
+
+}
+.panel li{
+    font-size: 14px;
+    list-style: none;
+    margin-top: 6px;
+}
+.accordion-wrapper{
+    width: 130px;
+}
+.accordion-wrapper .accordion::after{
+    content: "\002D";
+    color: #2770F1;
+    font-size: 19px;
+    font-weight: bold;
+    position: absolute;
+    padding-left: 8px;
+
+}
+.accordion-wrapper .active::after {
+    content: "\002B";
+}
+/* Navbar end */
+/* Header start */
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0 40px 7%;
+}
+.header-content-div{
+    width: 100%;
+    position: relative;
+}
+.header-content-div .header-content-img{
+    width: 100%;
+    height: 100%;
+}
+.header-content-div .header-content-img-1{
+    position: absolute;
+    bottom: 89px;
+    left: -85px;
+    width: 85px;
+}
+.header-content-div .togriburcgak{
+    position: absolute;
+    bottom: 89px;
+    left: 0;
+    background: #2770F1;
+    width: 170px;
+    height: 85px;
+}
+.header-content-div .tortburchak{
+    position: absolute;
+    bottom: 4px;
+    left: -85px;
+    background: #B6D1FF;
+    width: 85px;
+    height: 85px;
+}
+.header-content-div h1{
+    font-family: Montserrat;
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 46px;
+    width: 90%;
+    text-align: left;
+    color: #1B315F;
+}
+.header-content-div h1 span{
+    font-weight: 400;
+}
+.header-content-div ul{
+    font-size: 14px;
+    padding: 0 0 0 20px;
+    margin-top: 20px;
+    color: white;
+}
+.header-content-div ul li{
+    margin-top: 10px;
+    color: #1EBB92;
+}
+.header-content-div ul li span{
+    color: #3F578B;
+}
+.header-content-div .button-1{
+    background: #2770F1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin: 20px 10px 0 0;
+}
+.header-content-div .button-2{
+    background: #0400ff0b;
+    color: #2770F1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+}
+.header-content-img-2{
+    position: absolute;
+    bottom: 120px;
+    width: 60px;
+    left: -60px;
+}
+.header-content-div .union-01{
+    position: absolute;
+    left: -16%;
+    top: -30px;
+    width: 37px;
+}
+/* Header end */
+
+/* Main start */
+/* Todo:Popularnost start */
+.uslugi{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px 10% 7%;
+}
+.uslugi-img{
+   width: 29%;
+   position: relative;
+}
+.uslugi-img .uslugi-union{
+    position: absolute;
+    left: -52px;
+    width: 105px;
+}
+.uslugi-img .uslugi-user{
+    width: 360px;
+    height: 440px;
+    top: 104px;
+    left: 169px;
+    border-radius: 90px 0px 90px 0px;
+    opacity: 0.9;
+}
+.uslugi-img .togriburcgak{
+    position: absolute;
+    background: #B6D1FF;
+    width: 65px;
+    height: 65px;
+    bottom: -33px;
+    left: 65px;
+}
+.uslugi-img .tortburchak{
+    position: absolute;
+    bottom: 33px;
+    background: #2770F1;
+    width: 65px;
+    height: 65px;
+}
+.uslugi-img .uslugi-uchburchak{
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    width: 65px;
+    height: 65px;
+    transform: rotate(270deg);
+}
+.popularnost-h2{
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 46px;
+    color: #1B315F;
+    border-left: 4px solid #2770F1;
+    padding-left: 15px;
+    margin: 0 0 35px 25px;
+}
+.popularnost-h2 span{
+   font-weight: 400;
+}
+.uslugi-text{
+    width: 70%;
+    padding: 0 10px 0 0;
+}
+.uslugi-text-div_div1{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    gap: 30px;
+}
+.uslugi-text-div .p1{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 22px;
+    color: #1B315F;
+    border-right: 3px solid #2770F1;
+    margin-bottom: 20px;
+}
+.uslugi-text-div .p1 img{
+    margin-right: 10px;
+    width: 30px;
+}
+.uslugi-text-div_div1_box{
+    width: 50%;
+}
+.uslugi-text-div_div1_box .p2{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1B315F;
+    margin-bottom: 10px;
+}
+.usludi-text-div_div1_box1{
+    display: flex;
+    align-items: center;
+    height: 10px;
+    justify-content: space-between;
+    height: 30px;
+    text-align: center;
+    padding: 8px 5px 0 10px;
+    margin-bottom: 4px;
+}
+.usludi-text-div_div1_box1:hover{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.111);
+    border-radius: 4px;
+}
+.usludi-text-div_div1_box1 span{
+    color: #2770F1;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+}
+.usludi-text-div_div1_box1 p{
+    color: #1B315F;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+}
+/* Todo:Popularnost end */
+
+/* Todo:Etape start */
+.Etape-back{
+    background: #163063;
+    padding: 30px 0 40px 65px;
+    position: relative;
+}
+.Etape-text-div{
+    display: flex;
+    justify-content: space-between;
+}
+.Etape-back h2{
+    color: #fff;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 46px;
+    border-left: 4px solid #2770F1;
+    padding-left: 20px;
+    margin-bottom: 55px;
+}
+.Etape-back h2 span{
+    font-weight: 300;
+}
+.Etape-text-div-text{
+    width: 65%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 60px 20px 5px 0;
+    height: 450px;
+}
+.Etape-text-div-text .Etape-text-div-text-box{
+    width: 29%;
+    height:41%;
+    background: #FFFFFF;
+    border-radius: 56px 4px 4px 4px;
+    padding: 16px 16px 24px 16px;
+}
+.Etape-text-div-text-box .Etape-text-div-text-box-p{
+    color: #FFFFFF;
+    background: #2770F1;
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 17px;
+    border-radius: 42px 42px 42px 0px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.Etape-text-div-text-box .Etape-text-div-text-box-p2{
+    font-size: 11.3px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+}
+.Etape-text-div-img{
+    width: 35%;
+    position: relative;
+}
+.Etape-text-div-img img{
+    width: 100%;
+    height: 100%;
+}
+.Etape-text-div-img .togriburcgak{
+    position: absolute;
+    background: #B6D1FF;
+    width: 65px;
+    height: 65px;
+    bottom: 0;
+    right:  0;
+}
+.Etape-text-div-img .tortburchak{
+    position: absolute;
+    bottom: -65px;
+    right: 65px;;
+    background: #2770F1;
+    width: 65px;
+    height: 65px;
+}
+.Etape-text-div-img .uslugi-uchburchak{
+    position: absolute;
+    bottom: -65px;
+    right: 0;
+    width: 65px;
+    height: 65px;
+    transform: rotate(180deg);
+}
+.Union-3{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 70px;
+    transform: rotate(180deg);
+}
+.Union-4{
+    position: absolute;
+    top: -60px;
+    right: 5px;
+    width: 80px;
+}
+/* Todo:Etape end */
+/* Todo:Sertifikat start */
+.sertifikat-h2_1{
+    color: #152F60;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 46px;
+    border-left: 4px solid #2770F1;
+    padding-left: 20px;
+    margin-bottom: 55px;
+    margin-left: 45px;
+}
+.sertifikat-h2_1 span{
+    font-weight: 400;
+}
+.Sertifikat{
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+.sertifikat-div{
+    display: flex;
+    justify-content: space-between;
+}
+#wrapper{
+    width: 100%;
+    padding: 0 30px;
+    overflow-x: hidden;
+    position: relative;
+    border-right: 5px solid #152F6099;
+    border-left: 5px solid #152F6099;
+}
+#carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+#carousel::-webkit-scrollbar {
+    height: 0;
+}
+#content{
+    display: grid;
+    grid-gap: 40px;
+    grid-auto-flow: column;
+    box-sizing: border-box;
+}
+#prev,
+#next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    background: rgba(181, 188, 204, 0.323);
+}
+#prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+}
+#next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.sertifikat-color{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 47, 96, 0.6);
+}
+.sertifikat-div .boxx1{
+    position: relative;
+    width:285px;
+    height: 400px;
+}
+.sertifikat-div .boxx1:hover .sertifikat-color{
+    display: none;
+}
+.sertifikat-div .boxx1 img{
+     height: 100%;
+}
+.sertifikat-h2_2{
+    color: #152F60;
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 45px;
+    border-left: 4px solid #2770F1;
+    padding-left: 15px;
+    width: 70%;
+    margin: 40px 0 20px 0;
+    margin-left: 16%;
+}
+.sertifikat-h2_2 span{
+   font-weight: 350;
+}
+.sertifikat-p1{
+    color: #3F578B;
+    width: 62%;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 17.8%;
+}
+.sertifikat-h3{
+    color: #152F60;
+    margin: 10px 0 10px 17.8%;
+    font-size: 25px;
+}
+.sertifikat-p2{
+    color: #1B315F;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    margin: 10px 0 10px 17.8%;
+}
+.sertifikat-ul{
+    width: 62%;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin: 10px 0 10px 18.8%;
+}
+.sertifikat-ul li{
+   color: #1EBB92;
+}
+.sertifikat-ul li span{
+    color: #3F578B;
+ }
+/* Todo:Sertifikat end */
+/* Todo:Konsultaciya start */
+.konsultasiya-back_img{
+    height: 500px;
+    background: url(../img/back.jpg), #163063;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.konsultasiya-div{
+    background-color: #2770F1;
+    width: 50%;
+    border-radius: 4px;
+    padding: 5px 30px 30px 30px;
+}
+.konsultasiya-div h4{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 25px 0 10px 0;
+}
+.konsultasiya-div-p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffffd2;
+    text-align: center;
+}
+.konsultasiya-div-input_button{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 20px 0;
+}
+.konsultasiya-div-input_button .konsultasiya-div-input-i{
+    width: 37%;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 5px;
+    background-color: #ffffff3a;
+    display: none;
+}
+.konsultasiya-div-input-i input{
+    background-color: transparent;
+    height: 100%;
+    width: 88%;
+    border: none;
+    color: white;
+}
+.konsultasiya-div-input-i input::placeholder{
+    color: rgba(255, 255, 255, 0.408);
+}
+.konsultasiya-div-input-i i{
+    height: 100%;
+    width: 10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.konsultasiya-div-input_button button{
+    padding: 12px 25px;
+    border-radius: 4px;
+    background: #152F60;
+    text-align: center;
+    border: none;
+    color: white;
+}
+.konsultasiya-div-p1{
+    font-size: 13.5px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff90;
+}
+.konsultasiya-div-p1 a{
+    color: #ffffffa7;
+}
+.konsultasiya-back_img .Union-5{
+    position: absolute;
+    top: -48px;
+    width: 75px;
+    left: 0;
+}
+.konsultasiya-back_img .Union-6{
+    position: absolute;
+    bottom: -65px;
+    width: 75px;
+    right: 0;
+}
+/* Todo:Konsultaciya end */
+
+/* Todo:Foto Klinika start */
+.foto-klinika{
+    padding: 50px 45px 35px 45px;
+
+}
+.foto-klinika h2{
+    font-size: 30px;
+    color: #152F60;
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 45px;
+    border-left: 4px solid #2770F1;
+    padding-left: 15px;
+    width: 70%;
+}
+.foto-klinika .foto-klinika-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 85px;
+}
+.foto-klinika .foto-klinika-div-img{
+    width: 24%;
+    margin: 5px 0;
+    position: relative;
+}
+.foto-klinika .foto-klinika-div-img i{
+    position: absolute;
+    bottom: 1px;
+    right:  1px;
+    transform: translate(-50%,-50%);
+    font-size: 27px;
+    color:white;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #2770F1;
+    border-radius: 50%;
+    display: none;
+}
+.foto-klinika .foto-klinika-div-img:hover i{
+  display: block;
+}
+.foto-klinika .foto-klinika-div-img:hover img{
+    opacity: 0.7;
+}
+.foto-klinika .foto-klinika-div-img img{
+    width: 100%;
+    cursor: pointer;
+}
+.foto-klinika button{
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 12px 25px;
+    border-radius: 4px;
+    background: #2770F1;
+    text-align: center;
+    border: none;
+    align-items: center;
+    color: white;
+}
+.foto-klinika button i{
+    margin-left: 10px;
+    transform: rotateY(180deg);
+}
+/* Todo:Foto Klinika end */
+
+/* Todo:Nashi garantiya start */
+.nashi-garantiya_div_img{
+    position: relative;
+    padding: 0 0 10px 120px;
+    margin-bottom: 100px;
+}
+.nashi-garantiya-past{
+    position: absolute;
+    bottom: -13%;
+    left: 39.6%;
+    width: 100px;
+}
+.nashi-garantiya_box_img{
+    position: relative;
+    width: 58%;
+}
+.nashi-garantiya_box_img img{
+    width: 100%;
+}
+.nashi-garantiya_box_img .togriburcgak{
+    position: absolute;
+    background: #B6D1FF;
+    width: 65px;
+    height: 65px;
+    bottom: 4px;
+    left:  -65px;
+}
+.nashi-garantiya_box_img .tortburchak{
+    position: absolute;
+    bottom: -61px;
+    left: 0;
+    background: #2770F1;
+    width: 65px;
+    height: 65px;
+}
+.nashi-garantiya_box_img .nashi-garantiya-uchburchak{
+    position: absolute;
+    bottom: 4px;
+    left:  0;
+    width: 65px;
+    height: 65px;
+    transform: rotate(90deg);
+}
+.nashi-garantiya_box1_img1{
+    position: relative;
+    position: absolute;
+    top: 30px;
+    width: 45%;
+    height: 83%;
+    right: 115px;
+}
+.garantiya-div_img_p{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    height: 100%;
+    padding: 15px;
+}
+.garantiya-box_img_p{
+    width: 50%;
+    height: 50%;
+}
+.nomer-1{
+    border-right: 1px solid  #D7E2FF;
+    padding: 0 10px 10px 0;
+    border-bottom: 1px solid  #D7E2FF;
+}
+.nomer-2{
+    padding: 0 0 10px 50px;
+}
+.nomer-3{
+    padding: 25px 10px 5px 0;
+}
+.nomer-4{
+    border-left: 1px solid  #D7E2FF;
+    padding: 25px 10px 5px 50px;
+    border-top: 1px solid  #D7E2FF;
+}
+.garantiya-box_img_p img{
+    width: 60px;
+}
+.garantiya-box_img_p p{
+    font-size: 15.7px;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: #1B315F;
+}
+.garantiya-div_img_p .nashi-garantiya-uchburchak{
+    position: absolute;
+    top: -65.6px;
+    right: -65px;
+    width: 65.6px;
+    height: 65.6px;
+    transform: rotate(90deg);
+}
+.garantiya-div_img_p .tortburchak{
+    position: absolute;
+    top: -65px;
+    right: 0;
+    background: #152F60;
+    width: 65px;
+    height: 65px;
+}
+.garantiya-div_img_p .togriburcgak{
+    position: absolute;
+    background: #B6D1FF;
+    width: 65px;
+    height: 65px;
+    top: 0;
+    right: -65px;
+}
+.Nashi-garantiya_text{
+    padding-bottom: 30px;
+}
+.garantiya-h2_2{
+    color: #152F60;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    border-left: 4px solid #2770F1;
+    padding-left: 15px;
+    width: 70%;
+    margin: 40px 0 10px 0;
+    margin-left: 17%;
+}
+.garantiya-p1{
+    color: #3F578B;
+    width: 64%;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 18.6%;
+}
+.garantiya_i_p{
+    display: flex;
+    margin-left: 18.6%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.garantiya_i_p i{
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+    padding: 3px 0 0 0 ;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    background: #1B315F;
+    color: #FFFFFF;
+    margin-right: 8px;
+}
+.garantiya_i_p p{
+    color: #3F578B;
+    font-size: 13px;
+    width: 78%;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+.garantiya_i_p p span{
+    font-weight: 700;
+    color: #152F60;
+}
+.garantiya-p2{
+    color: #1B315F;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;;
+    margin-left: 18.6%;
+
+}
+.garantiya-ul{
+    width: 62%;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    margin:10px 0 10px 20.4%;
+}
+.garantiya-ul li{
+   color: #1EBB92;
+}
+.garantiya-ul li span{
+    color: #3F578B;
+ }
+/* Todo: Nashi garantiya end */
+
+/* Todo: Nashi doktori start */
+#wrapper1{
+    width: 100%;
+    overflow-x: hidden;
+}
+#carousel1{
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 0 10px;
+}
+#carousel1::-webkit-scrollbar {
+    height: 0;
+    width: 100px;
+}
+#content1{
+    display: flex;
+    padding-right: 10px;
+    grid-gap: 30px;
+    grid-auto-flow: column;
+    box-sizing: border-box;
+}
+#prev1,
+#next1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    background: rgba(181, 188, 204, 0.323);
+}
+#prev1 {
+    top: 40%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+}
+#next1 {
+    top: 40%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.nashi-doktori{
+    background: #162D5F;
+    padding: 40px 0 1px 0;
+    position: relative;
+}
+.nashi-doktori-union-8{
+    position: absolute;
+    top: -54px;
+    width: 45px;
+    left: -4px;
+}
+.nashi-doktori-union-9{
+    position: absolute;
+    right: 0;
+    bottom: -122px;
+    width: 75px;
+}
+.doktori-div-box{
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+.doktori-div-box img{
+    width: 280px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.doktori-div-box a h5{
+    font-size: 19px;
+    font-weight: 700;
+    margin: 4px 10px;
+    line-height: 26px;
+    text-align: left;
+    color: #1B315F;
+}
+.doktori-div-box  h5 span{
+    font-weight: 400;
+}
+.hovera:hover{
+    cursor: pointer;
+}
+.doktori-div-box p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #3F578B;
+    margin: 4px 10px 8px 10px;
+}
+.nashi-doktori button{
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: #2770F1;
+    border: 0 none;
+    display: block;
+    margin: 50px auto;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+}
+/* Todo: Nashi doktori end */
+
+/* Todo: Kontact_mesto start*/
+.Kontact-h2_2{
+    color: #152F60;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 46px;
+    border-left: 4px solid #2770F1;
+    padding-left: 20px;
+    margin-left: 45px;
+}
+.Kontact-h2_2 span{
+    font-weight: 300;
+}
+.kontact-mesto-div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-left: 20px;
+    position: relative;
+}
+.kontact-mesto-union-10{
+    position: absolute;
+    bottom: -88px;
+    left: 35%;
+    width: 85px;
+}
+.kontact{
+    width: 22%;
+    position: relative;
+}
+.mesto{
+    width: 78%;
+}
+.karta{
+    width: 100%;
+    height: 500px;
+    border-top-left-radius: 120px;
+    border: 0;
+}
+.kontact-position{
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.236);
+    border-radius: 1px;
+    top: 60px;
+    left: 65px;
+    width: 400px;
+    padding: 20px 25px;
+}
+.kontact-position p{
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 600;
+    color: #152F60;
+    line-height: 39.01px;
+    text-align: left;
+}
+.kontact-position .mesto-uchburchak{
+    position: absolute;
+    top: -65.6px;
+    left: -65px;
+    width: 65.6px;
+    height: 65.6px;
+}
+.kontact-position .tortburchak{
+    position: absolute;
+    top: 0;
+    left: -65px;
+    background: #152F60;
+    width: 65px;
+    height: 65px;
+}
+.kontact-position .togriburcgak{
+    position: absolute;
+    background: #B6D1FF;
+    width: 65px;
+    height: 65px;
+    top: -65px;
+    left: 0;
+}
+.kontact-position ul li{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    margin: 10px 0;
+}
+.kontact-position ul{
+    list-style: none;
+}
+.kontact-position ul li i{
+    color: #2770F1;
+    padding-right: 5px;
+}
+.kontact-position ul li a{
+    color: #3F578B;
+    text-decoration: none;
+}
+.kontact-position button{
+    padding: 16px 20px;
+    border-radius: 4px;
+    color: white;
+    background-color: #2770F1;
+    border: 0;
+    display: block;
+    margin:0 auto;
+    margin-top: 30px;
+}
+/* Todo: Kontact_mesto end */
+
+/* Todo: Footer start */
+.footer{
+    display: flex;
+    background: #162D5F;
+    padding: 30px 45px;
+    justify-content: space-between;
+}
+.footer_div1{
+    width: 23%;
+}
+.footer_div-dimo-logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer_div-dimo-logo div{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2770F1;
+}
+.footer_div-dimo-logo h3{
+    color: #FFFFFF;
+    margin-left: 15px;
+    font-weight: 300;
+    font-size: 20px;
+}
+.footer_div1 a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+.footer-div1-i-p{
+     color: #FFFFFF;
+     font-weight: 500;
+     margin-top: 10px;
+     margin-bottom: 6px;
+     margin-left: 4px;
+}
+.footer-div1-i-p i {
+    color: #2770F1;
+}
+.footer_div-p01{
+    color: white;
+    font-weight: 200;
+    font-size: 14.5px;
+    text-decoration: dotted;
+}
+.footer_div1 ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 20px;
+}
+.footer_div1 ul li{
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    background: #2e518c58;
+    color:white;
+}
+.footer_div1 ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    align-items: center ;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer_div2{
+    width: 49%;
+}
+.footer-div{
+    background-color: #2770F1;
+    width: 100%;
+    border-radius: 4px;
+    padding: 5px 20px 20px 20px;
+}
+.footer-div h4{
+    font-size:  18px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 25px 0 10px 0;
+}
+.footer-div-p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffffd2;
+    text-align: center;
+}
+.footer-div-input_button{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 20px 0;
+}
+.footer-div-input_button .konsultasiya-div-input-i{
+    width: 34%;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 5px;
+    background-color: #ffffff3a;
+    display: none;
+}
+.footer-div-input-i input{
+    background-color: transparent;
+    height: 100%;
+    width: 88%;
+    border: none;
+    color: white;
+}
+.footer-div-input-i input::placeholder{
+    color: rgba(255, 255, 255, 0.408);
+}
+.footer-div-input-i i{
+    height: 100%;
+    width: 10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.footer-div-input_button button{
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: #152F60;
+    text-align: center;
+    border: none;
+    color: white;
+}
+.footer-div-p1{
+    font-size: 12.5px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffffd2;
+    margin-bottom: 10px;
+}
+.footer-div-p1 a{
+    color: #ffffffa7;
+}
+.footer_div3{
+    width: 22%;
+}
+.footer_div3 .panel{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-out;
+    position: absolute;
+    background: transparent;
+    width: 120px;
+    padding: 5px 10px ;
+}
+.footer_div3 p{
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 600;
+}
+.footer_div3 ul{
+    list-style: none;
+}
+.footer_div3 ul li {
+    margin-top: 18px;
+}
+.footer_div3 ul li a{
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+}
+.footer_bar .accordion-wrapper .panel li{
+    color: white;
+}
+.footer_bar .accordion-wrapper .panel{
+    background-color: #162D5F;
+    width: 120px;
+}
+
+/* Todo: Footer end */
+
+/* Main end */

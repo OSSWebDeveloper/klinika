@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/nashi-vrachi.css" %}">
+    <title>Nashi vrachi</title>
+{% endblock %}
+
+<!-- main -->
+{% block content %}
+    <main>
+        <section id="Nashi-vrachi">
+            <div class="container">
+                <div style="padding-top: 40px; padding-bottom: 50px;">
+
+                    <h2
+                        style="color: #152F60;font-size: 50px;font-weight: bold;line-height: 45px;border-left: 4px solid #2770F1;padding-left: 15px;margin:20px 0 20px 30px;">
+                        Наши врачи</h2>
+                    <div class="nashi-vrachi-str-div">
+                        <div class="nashi-vrachi-str-div-box" style="display: none;">
+                            <div class="content-vrachi-div">
+                                <div class="content-vrachi-div_box" style="padding-left: 20px; margin-bottom: 30px;">
+                                    <p
+                                        style="font-size: 19px;font-weight: 800;line-height: 32px;text-align: left;color: rgba(27, 49, 95, 1);">
+                                        Специализация</p>
+                                    <ul style="margin: 10px 20px;">
+                                        <li><a href="#">Все врачи</a></li>
+                                        <li class="li"><a href="#">Хирургия</a></li>
+                                        <li><a href="#">Психология</a></li>
+                                        <li><a href="#">Кардиология</a></li>
+                                    </ul>
+                                </div>
+                                <div class="content-vrachi-div_box">
+                                    <div class="konsultasiya-div">
+                                        <h4>Получите консультацию специалиста бесплатно</h4>
+                                        <p class="konsultasiya-div-p">Не нашли категорию или остались вопросы? Оставьте
+                                            заявку и мы поможем вам</p>
+                                        <div class="konsultasiya-div-input_button">
+                                            <div class="konsultasiya-div-input-i">
+                                                <i class="fa-regular fa-user fa-flip-horizontal"></i>
+                                                <input type="text" placeholder=" Ваше имя">
+                                            </div>
+                                            <div class="konsultasiya-div-input-i">
+                                                <i class="fa-solid fa-mobile-screen"></i>
+                                                <input type="text" placeholder="Телефон">
+                                            </div>
+                                        </div>
+                                        <p class="konsultasiya-div-p1">Нажимая кнопку “Отправить заявку”, вы даете согласие
+                                            на обработку
+                                            <a href="#">персональных данных</a>
+                                        </p>
+                                        <button
+                                            style="width: 90%; margin: 12px 0 12px 5%; color: white; background-color: #2770F1; height: 35px; border: 0; border-radius: 2px;">Оставить
+                                            заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nashi-vrachi-str-div-box-img" style="padding:10px 40px; margin-top: 35px;">
+                            <div class="nashi-vrachi-str-div-box-img_div">
+                                {% for doktor in doktors %}
+                                    {% if doktor.group_lang == 'ru' %}
+                                        <div class="doktori-div-box">
+                                            <img src="{{doktor.image.url}}" alt="Doktor-1">
+                                            <a href="{% url 'doktor_detail' doktor.id %}" style="text-decoration: none;">
+                                                <h5>{{doktor.name}}</h5>
+                                            </a>
+                                            <p>{{doktor.min_skill}}</p>
+
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+
+                            </div>
+                            <button style="display: none;">Загрузить еще</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+    <!-- main -->

@@ -1,0 +1,49 @@
+{% extends "baseuz.html" %}
+{% load static %}
+{% block head %}
+<title>Bosh sahifa</title>
+<link rel="stylesheet" href="{% static "css/kontact.css" %}">
+
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- main -->
+    <main>
+         <!-- Todo Kontact_mesto -->
+         <section id="Kontact">
+            <div class="container">
+                <div class="kontact_mesto" style="padding-top: 40px; padding-bottom: 120px;">
+                    <div class="kontact-mesto-div">
+                        <div class="kontact">
+                            <div class="kontact-position">
+                                <h2 class="Kontact-h2_2">Aloqa</h2>
+                                <p style="font-size: 26px; margin-left: 20px; font-weight: 400; color:rgba(27, 49, 95, 0.889);">г. Богучар, ул. Мжд Киевское 17-й км</p>
+                                <p style="font-size: 22px; margin: 10px 0 0 20px;">Telefon:</p>
+                                <p style="margin: -10px 0 0 0 ;"><a href="#" style="font-size: 20px; text-decoration: none; margin: 10px 0 0 20px; font-weight: 300; color: rgba(27, 49, 95, 0.853);">8 (800) 123-45-67</a></p>
+                                <p style="margin: -10px 0 0 0 ;"><a href="#"  style="font-size: 20px; text-decoration: none; margin: 10px 0 0 20px; font-weight: 300; color: rgba(27, 49, 95, 0.853);
+                                    ">8 (800) 123-45-67</a></p>
+                                <p style="font-size: 22px; margin: 10px 0 0 20px;">Email:</p>
+                                <p style="margin: -15px 0 0 0 ;"><a href="#" style="font-weight: 500; font-size: 18px; color:rgba(39, 112, 241, 1); margin-left: 20px;">example@example.ru</a></p>
+                                <button>Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="mesto">
+                            <div class="kontact-mesto-div-karta">
+                            <iframe class="karta" src="https://maps.google.com/maps?q=buxara%20&amp;t=k&amp;z=19&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                            <img class="mesto-uchburchak" src="{% static "/img/Uchburchak.png" %}" alt="Uchburchak">
+                            <div class="togriburcgak"></div>
+                            <div class="tortburchak"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main -->
+
+    <script src="{% static "./js/main.js" %}"></script>
+
+{% endblock %}

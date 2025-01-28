@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font icons-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <style>
+        .hh:hover{
+            cursor: pointer;
+        }
+        a{
+            text-decoration:none;
+        }
+        .yopish{
+            position: absolute;
+            left:600px;
+            top: 20px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+            color:white;
+        }
+        .Input-display_none{
+            width: 200px;
+            height: 35px;
+            border: none;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            padding-left: 5px;
+            display: none;
+            margin-left: 20px;
+        }
+        .a_langUZB_RU{
+            color: white;
+            text-decoration: none;
+            background: rgba(183, 182, 182, 0.403);
+            height: 35px;
+            align-items: center;
+            display: inline;
+            border-radius: 4px;
+            margin-left: 5px;
+            padding: 8px 5px 5px 5px;
+        }
+        .nav-position-relative_abs{
+            position: absolute;
+            width: 650px;
+            height: 220px;
+            background-color: #162D5F   ;
+            opacity: 0.8;
+            z-index: 1;
+            display: block;
+            padding: 30px 50px;
+            top:   10px;
+            text-align: center;
+            position: fixed;
+            left: 27%;
+            display: none;
+        }
+        .nav-position-relative_abs p{
+            color: white;
+            font-size: 25px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .nav-position-relative_abs button{
+            font-size: 20px;
+            font-weight: 400;
+            padding: 10px 30px;
+            margin-top: 30px;
+            border: 0;
+            background-color: rgba(0, 0, 255, 0.879);
+            border-radius: 4px;
+        }
+        .nav-position-relative_abs button a{
+           color: white;
+           text-decoration: none;
+
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!--! Navbar Base start -->
+    <nav>
+        <div class="navbar">
+            <!-- Todo Navbar  -->
+         <div class="container">
+            <div class="nav">
+                <div class="nav-div1">
+                    <div class="nav-div1-box">
+                        <a href="{% url "index" %}"><img src="{% static "./img/Klinika icon.png" %}" alt="img-icon Klinika"></a>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-paper-plane"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-div1-box nav-div1-box1">
+                        <p><a href="tel/883040928"><b>8 (800) 123-45-67</b></a> <br>
+                        г. Богучар, ул. Мжд Киевское 17-й км</p>
+                        <form method="get" style="display: flex;" action="{% url 'index' %}">
+                            <input style='display: block;' id="sub2" class="Input-display_none" type="search" placeholder="поиск" name="query">
+                            <a href="#" onclick="showHide('sub2')"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </form>
+                        {% comment %} <a href="#" onclick="showHide('sub2')"><i class="fa-solid fa-magnifying-glass"></i></a> {% endcomment %}
+                        <a class="a_langUZB_RU" href="#" style="background-color: #2770F1; margin-left: 20px;">RU</a>
+                        <a class="a_langUZB_RU" href="{% url "indexuz" %}" style="color: black;">UZB</a>
+                        <button  onclick="showHide('sub1')">Срочный вызов врача</button>
+                    </div>
+                </div>
+                <!-- Todo position-relative  -->
+                <div class="nav-position-relative_abs" id="sub1">
+                    <span class="material-symbols-outlined yopish" onclick="showHide('sub1')">close</span>
+                    <p>Получите консультацию специалиста бесплатно</p>
+                    <button style="margin-right: 20px;"><a href="#"><i class="fa-solid fa-phone"></i> Позвонить</a></button> <button><a href="#"><i class="fa-solid fa-paper-plane"></i> Телеграм</a></button>
+
+                </div>
+            </div>
+        </div>
+        <!-- Todo Scroller bar -->
+        {% comment %} <div class="container">
+            <div class="bar">
+                <ul class="bar-ul">
+                 <div class="accordion-wrapper">
+                    <li class="accordion active "><a href="#">Наркомания</a></li>
+                    <!-- Todo Hohlagancha gap qushsa buladi   -->
+                    <ul class="panel">
+                        <li>Gap nomer 1</li>
+                        <li>Gap nomer 2</li>
+                        <li>Gap nomer 3</li>
+                        <li>Gap nomer 4</li>
+                    </ul>
+                    <!--Todo gap tugadi  -->
+                 </div>
+                <div class="accordion-wrapper">
+                    <li class="accordion active"><a href="#">Алкоголизм</a></li>
+                    <!-- Todo Hohlagancha gap qushsa buladi   -->
+                    <ul class="panel">
+                        <li>Gap nomer 1</li>
+                    </ul>
+                    <!--Todo gap tugadi  -->
+                </div>
+                <div class="accordion-wrapper">
+                    <li class="accordion active"><a href="#">Реабилитация</a></li>
+                    <!-- Todo Hohlagancha gap qushsa buladi   -->
+                    <ul class="panel">
+                        <li>Gap nomer 1</li>
+                    </ul>
+                    <!--Todo gap tugadi  -->
+                </div>
+                <div class="accordion-wrapper" style='width: 50px;'>
+                    <li><a href="{% url "galereya" %}">Галерея</a></li>
+                </div>
+                <div class="accordion-wrapper" style='width: 50px;'>
+                    <li><a href="{% url "xizmatlar" %}">Цены</a></li>
+                </div>
+                <div class="accordion-wrapper">
+                    <li><a href="{% url "doktors" %}">Hаши доктори </a></li>
+                </div>
+                    <li><a href="{% url "contact" %}">Контакты</a></li>
+                </ul>
+            </div>
+        </div> {% endcomment %}
+        </div>
+    </nav>
+    <!--! Navbar Base end -->
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="footer_div1">
+                    <div class="footer_div-dimo-logo">
+                        <div></div>
+                        <h3>ДЕМО ЛОГО</h3>
+                    </div>
+                    <a href="#">8 (800) 123-45-67</a>
+                    <p class="footer-div1-i-p">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Адрес
+                    </p>
+                    <p class="footer_div-p01">г. Богучар, ул. Мжд Киевское 17-й км</p>
+                    <p class="footer-div1-i-p">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Email
+                    </p>
+                    <p class="footer_div-p01">example@example.ru</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-paper-plane"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer_div2">
+                    <div class="footer-div">
+                        <h4>Получите консультацию специалиста бесплатно</h4>
+                        <p class="footer-div-p">Не нашли категорию или остались вопросы? Оставьте заявку и мы поможем вам</p>
+                        <div class="footer-div-input_button">
+                            <div class="konsultasiya-div-input-i">
+                                <i class="fa-regular fa-user fa-flip-horizontal"></i>
+                                <input type="text" placeholder=" Ваше имя" >
+                            </div>
+                            <div class="konsultasiya-div-input-i">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                <input type="text" placeholder="Телефон" >
+                            </div>
+                            <button onclick="showHide('sub2')">Оставить заявку</button>
+                        </div>
+                        <p class="footer-div-p1">Нажимая кнопку “Отправить заявку”, вы даете согласие на обработку
+                        <a href="#">персональных данных</a></p>
+                    </div>
+                </div>
+                <div class="footer_div3">
+                    <div class="footer_bar">
+                        <p>Полезные ссылки</p>
+                        <ul class="bar-ul">
+                            <div class="accordion-wrapper">
+                               <li class="accordion active "><a href="#">Наркомания</a></li>
+                               <!-- Todo Hohlagancha gap qushsa buladi   -->
+                               <ul class="panel panel1">
+                                   <li>Gap nomer 1</li>
+                                   <li>Gap nomer 2</li>
+                                   <li>Gap nomer 3</li>
+                                   <li>Gap nomer 4</li>
+                               </ul>
+                               <!--Todo gap tugadi  -->
+                            </div>
+                           <div class="accordion-wrapper">
+                               <li class="accordion active"><a href="#">Алкоголизм</a></li>
+                               <!-- Todo Hohlagancha gap qushsa buladi   -->
+                               <ul class="panel">
+                                   <li>Gap nomer 1</li>
+                               </ul>
+                               <!--Todo gap tugadi  -->
+                           </div>
+                           <div class="accordion-wrapper">
+                               <li class="accordion active"><a href="#">Реабилитация</a></li>
+                               <!-- Todo Hohlagancha gap qushsa buladi   -->
+                            <ul class="panel">
+                                <li>Gap nomer 1</li>
+                            </ul>
+                            <!--Todo gap tugadi  -->
+                        </div>
+                        <div class="accordion-wrapper">
+                            <li class="accordion active"><a href="#">Кодирование</a></li>
+                            <!-- Todo Hohlagancha gap qushsa buladi   -->
+                            <ul class="panel">
+                                <li>Gap nomer 1</li>
+                            </ul>
+                            <!--Todo gap tugadi  -->
+                        </div>
+                        <div class="accordion-wrapper">
+                            <li><a href="{% url "xizmatlar" %}">Цены</a></li>
+                        </div>
+                        <div class="accordion-wrapper">
+                            <li class="accordion active"><a href="#">О клинике</a></li>
+                            <!-- Todo Hohlagancha gap qushsa buladi   -->
+                            <ul class="panel">
+                                <li>Gap nomer 1</li>
+                            </ul>
+                            <!--Todo gap tugadi  -->
+                        </div>
+                            <li><a href="{% url "contact" %}">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static "js/main.js" %}"></script>
+    <script>
+        Object.defineProperty(window, 'creators', {
+            get: function() {
+                console.log("Olimjonov Samandar, A'zamov Alisher");
+            }
+        });
+    </script>
+
+</body>
+</html>

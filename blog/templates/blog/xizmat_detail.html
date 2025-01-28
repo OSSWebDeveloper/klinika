@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2 class='text-center'>xizmat {{xizmat.name}}ning sahifasi</h2>
+    <div class="container">
+
+            <div class="card" style="width: 25rem;">
+                {% comment %} <img src="{{xizmat.image.url}}" class="card-img-top" alt="{{xizmat.name}}"> {% endcomment %}
+                <div class="card-body">
+                    <h5 class="card-title">{{xizmat.name}}</h5>
+                    {% comment %} <p class="card-text">{{xizmat.price}}</p> {% endcomment %}
+                    {% comment %} <p class="card-text">{{xizmat.staj}}</p> {% endcomment %}
+
+                    <p class='card-text'>Price {{xizmat.price}}$</p>
+                    {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+                </div>
+            </div>
+    </div>
+{% endblock %}

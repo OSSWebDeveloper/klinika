@@ -1,0 +1,25 @@
+{% extends "baseuz.html" %}
+{% block content %}
+    {% if doktor.group_lang == 'uz' %}
+        <h2 class='text-center'>Doktor {{doktor.name}}ning sahifasi</h2>
+        <div class="container">
+        
+                <div class="card" style="width: 25rem;">
+                    <img src="{{doktor.image.url}}" class="card-img-top" alt="{{doktor.name}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{doktor.name}}</h5>
+                        <p class="card-text">{{doktor.min_skill}}</p>
+                        <p class="card-text">{{doktor.max_skill}}</p>
+                        {% comment %} <p class="card-text">{{doktor.staj}}</p> {% endcomment %}
+                    
+                        <p class='card-text'>Price {{doktor.price}}$</p>
+                        {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+                    </div>
+                </div>
+                <img src="{{doktor.sertificat1.url}}" class="card-img-top" alt="{{doktor.name}}">
+                <img src="{{doktor.sertificat2.url}}" class="card-img-top" alt="{{doktor.name}}">
+            
+            
+        </div>
+    {% endif %}
+{% endblock %}

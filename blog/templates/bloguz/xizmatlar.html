@@ -1,0 +1,72 @@
+{% extends "baseuz.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static './css/usligi.css' %}">
+<title>Nashi uslugi</title>
+{% endblock %}
+{% block content %}
+<!-- main -->
+<main>
+    <section id="Nashi-vrachi">
+        <div class="container">
+            <div style="padding-top: 40px;">
+                <h2
+                    style="color: #152F60;font-size: 50px;font-weight: bold;line-height: 45px;border-left:                               4px solid #2770F1;padding-left: 15px;margin:20px 0 20px 30px;">
+                    Xizmatlar</h2>
+                    <div class="nashi-vrachi-str-div">
+                        <div class="nashi-vrachi-str-div-box-img" style="padding:10px 40px; margin-top: 35px;">
+                            <div class="nashi-vrachi-str-div-box-img_div" style="display: flex;">
+                                {% for bc in katta_kategoriyalar %}
+                                    {% if bc.group_lang == 'uz' %}
+                                    <div class="accordion_2 li01_bac">
+                                        <li class="li01"><a href="#">{{bc.name}}</a></li>
+                                    </div>
+                                        <div class="panel_2" style="padding: 0 20px; width: 100%; gap: 5px;">
+                                            {% for sc in kichik_kategoriyalar %}
+                                                {% if sc.bc == bc %}
+                                                    <div class="nashi_uslugi_ul_li_a" style="width: 48%;">
+                                                        <li class=" accordion_2"><a href="#">{{sc.name}}</a></li>
+                                                        <div class="uzgarmas">
+                                                            {% for xizmat in xizmatlar %}
+                                                                {% if xizmat.max_group == bc and xizmat.min_group == sc %}
+                                                                    <ul style=" display: flex; justify-content: space-between; margin: 10px 0;" class="ul_li_hover">
+                                                                        <li class="li02" style="list-style: none; margin-left: 28px;">{{xizmat.name}}</li>
+                                                                        <li class="li02" style="list-style: none;">{{xizmat.price}} so'm</li>
+                                                                    </ul>
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- main -->
+
+<script src="{% static './js/main.js' %}" >
+</script>
+<script>
+    var accordion_2 = document.getElementsByClassName("accordion_2");
+    var b;
+    for (b = 0; b < accordion_2.length; b++) {
+        accordion_2[b].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel_2 = this.nextElementSibling;
+            if (panel_2.style.maxHeight) {
+                panel_2.style.maxHeight = null;
+            } else {
+                panel_2.style.maxHeight = panel_2.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+{% endblock %}
